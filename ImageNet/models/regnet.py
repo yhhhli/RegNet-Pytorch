@@ -12,6 +12,7 @@ regnet_3200M_config = {'WA': 26.31, 'W0': 88, 'WM': 2.25, 'DEPTH': 25, 'GROUP_W'
 regnet_4000M_config = {'WA': 38.65, 'W0': 96, 'WM': 2.43, 'DEPTH': 23, 'GROUP_W': 40, 'BOT_MUL': 1}
 regnet_6400M_config = {'WA': 60.83, 'W0': 184, 'WM': 2.07, 'DEPTH': 17, 'GROUP_W': 56, 'BOT_MUL': 1}
 model_urls = {
+    'regnet_200m': 'https://drive.google.com/uc?export=download&id=15iLDTrT7x1GsonarLeyM5jGt8UnxWAwI',
     'regnet_400m': 'https://drive.google.com/uc?export=download&id=1Z32pN8cnM0eNtNQCfbQM8gFp981gladb',
     'regnet_600m': 'https://drive.google.com/uc?export=download&id=1HNPvlsDuAvRaEzG5fma1hAE5OcGRbANd',
     'regnet_800m': 'https://drive.google.com/uc?export=download&id=1AvNhwQRZhGRdeGcqpjEPIjYyFgNbOEKJ',
