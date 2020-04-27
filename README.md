@@ -41,7 +41,7 @@ Here is the summary for the accuracy, params and macs.
 
 ### ImageNet
 
-For imagenet models, we keep the model and training configuration exactly the same with the original [released codes](https://github.com/facebookresearch/pycls). We train the model using pytorch framework, the checkpoints are released [here](https://drive.google.com/open?id=1lbIBzQNW2CqbmnbAkY8DM5apzq_YXWFc), and the summary of the results is shown below
+For imagenet models, we keep the model and training configuration exactly the same with the original [released codes](https://github.com/facebookresearch/pycls). We train the model using pytorch framework,  and the summary of the results is shown below.
 
 | Models      | FLOPs (10^6) | Params (10^6) | Hyper-params                         | Accuracy (Paper) | Accuracy (Ours) |
 | ----------- | ------------ | ------------- | ------------------------------------ | ---------------- | --------------- |
@@ -54,4 +54,4 @@ For imagenet models, we keep the model and training configuration exactly the sa
 | RegNet-4G   | 4014         | 22.1          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.6             | N/A             |
 | RegNet-6.4G | 6527         | 26.2          | batch512_wd0.00005_cos100epoch_lr0.4 | 79.2             | N/A             |
 
-use `pretrained = True`  to load the pre-trained models from google drive. 
+Note: we only uploaded regnet_200MF, 400MF, 600MF in this repo. Other pretrained models can be found in [here](https://drive.google.com/open?id=1lbIBzQNW2CqbmnbAkY8DM5apzq_YXWFc). Use `pretrained = True`  to load the pre-trained models. 

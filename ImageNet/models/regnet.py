@@ -1,7 +1,6 @@
 import numpy as np
 from models.reglayers import AnyNet, WrappedModel
-from torch.hub import load_state_dict_from_url
-
+import torch
 
 regnet_200M_config = {'WA': 36.44, 'W0': 24, 'WM': 2.49, 'DEPTH': 13, 'GROUP_W': 8, 'BOT_MUL': 1}
 regnet_400M_config = {'WA': 24.48, 'W0': 24, 'WM': 2.54, 'DEPTH': 22, 'GROUP_W': 16, 'BOT_MUL': 1}
@@ -11,13 +10,13 @@ regnet_1600M_config = {'WA': 34.01, 'W0': 80, 'WM': 2.25, 'DEPTH': 18, 'GROUP_W'
 regnet_3200M_config = {'WA': 26.31, 'W0': 88, 'WM': 2.25, 'DEPTH': 25, 'GROUP_W': 48, 'BOT_MUL': 1}
 regnet_4000M_config = {'WA': 38.65, 'W0': 96, 'WM': 2.43, 'DEPTH': 23, 'GROUP_W': 40, 'BOT_MUL': 1}
 regnet_6400M_config = {'WA': 60.83, 'W0': 184, 'WM': 2.07, 'DEPTH': 17, 'GROUP_W': 56, 'BOT_MUL': 1}
-model_urls = {
-    'regnet_200m': 'https://drive.google.com/uc?export=download&id=15iLDTrT7x1GsonarLeyM5jGt8UnxWAwI',
-    'regnet_400m': 'https://drive.google.com/uc?export=download&id=1Z32pN8cnM0eNtNQCfbQM8gFp981gladb',
-    'regnet_600m': 'https://drive.google.com/uc?export=download&id=1HNPvlsDuAvRaEzG5fma1hAE5OcGRbANd',
-    'regnet_800m': 'https://drive.google.com/uc?export=download&id=1AvNhwQRZhGRdeGcqpjEPIjYyFgNbOEKJ',
-    'regnet_1600m': 'https://drive.google.com/uc?export=download&id=16e-aykSJuP8iv__QQcGJQhoAqKmEXLNY',
-    'regnet_3200m': 'https://drive.google.com/uc?export=download&id=1vftWivgw0VEAAauyHOu3udTv7cT41un0',
+model_paths = {
+    'regnet_200m': '../ckpts/regnet_200m.pth.tar',
+    'regnet_400m': '../ckpts/regnet_400m.pth.tar',
+    'regnet_600m': '../ckpts/regnet_600m.pth.tar',
+    'regnet_800m': '../ckpts/regnet_800m.pth.tar',
+    'regnet_1600m': '../ckpts/regnet_1600m.pth.tar',
+    'regnet_3200m': '../ckpts/regnet_3200m.pth.tar',
     }
 
 
@@ -95,7 +94,7 @@ def regnet_200M(pretrained=False, **kwargs):
     model = RegNet(regnet_200M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_200m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_200m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -104,7 +103,7 @@ def regnet_400M(pretrained=False, **kwargs):
     model = RegNet(regnet_400M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_400m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_400m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -113,7 +112,7 @@ def regnet_600M(pretrained=False, **kwargs):
     model = RegNet(regnet_600M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_600m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_600m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -122,7 +121,7 @@ def regnet_800M(pretrained=False, **kwargs):
     model = RegNet(regnet_800M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_800m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_800m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -131,7 +130,7 @@ def regnet_1600M(pretrained=False, **kwargs):
     model = RegNet(regnet_1600M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_1600m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_1600m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -140,7 +139,7 @@ def regnet_3200M(pretrained=False, **kwargs):
     model = RegNet(regnet_3200M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_3200m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_3200m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -149,7 +148,7 @@ def regnet_4000M(pretrained=False, **kwargs):
     model = RegNet(regnet_4000M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_4000m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_4000m'])
         model.load_state_dict(state_dict)
     return model
 
@@ -158,6 +157,6 @@ def regnet_6400M(pretrained=False, **kwargs):
     model = RegNet(regnet_6400M_config, **kwargs)
     if pretrained:
         model = WrappedModel(model)
-        state_dict = load_state_dict_from_url(model_urls['regnet_6400m'], progress=True)
+        state_dict = torch.load(model_paths['regnet_6400m'])
         model.load_state_dict(state_dict)
     return model
