@@ -31,7 +31,7 @@ Here is the summary for the accuracy, params and macs.
 | RegNet-200M | 62           | 2.31          | batch128_wd0.0001_cos300epoch_lr0.1 | 93.58    |
 | RegNet-400M | 126          | 4.77          | batch128_wd0.0001_cos300epoch_lr0.1 | 94.15    |
 | RegNet-600M | 192          | 5.67          | batch128_wd0.0001_cos300epoch_lr0.1 | 94.73    |
-| RegNet-800M | 258          | 6.60          | batch128_wd0.0001_cos300epoch_lr0.1 | N/A      |
+| RegNet-800M | 258          | 6.60          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.01    |
 | RegNet-1.6G | 522          | 8.28          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.45    |
 | RegNet-3.2G | 1038         | 14.3          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.53    |
 | RegNet-4G   | 1298         | 20.8          | batch128_wd0.0001_cos300epoch_lr0.1 | NA       |
