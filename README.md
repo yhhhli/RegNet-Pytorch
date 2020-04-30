@@ -49,7 +49,7 @@ For imagenet models, we keep the model and training configuration exactly the sa
 | RegNet-800M | 820          | 7.25          | batch1k_wd0.00005_cos100epoch_lr0.8  | 75.2             | 75.13           |
 | RegNet-1.6G | 1635         | 9.19          | batch512_wd0.00005_cos100epoch_lr0.4 | 77.0             | 77.09           |
 | RegNet-3.2G | 3233         | 15.3          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.3             | 78.54           |
-| RegNet-4G   | 4014         | 22.1          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.6             | N/A             |
+| RegNet-4G   | 4014         | 22.1          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.6             | 79.09           |
 | RegNet-6.4G | 6527         | 26.2          | batch512_wd0.00005_cos100epoch_lr0.4 | 79.2             | 79.36           |
 
 Note: we only uploaded regnet_200MF, 400MF, 600MF in this repo. Other pretrained models can be found in [here](https://drive.google.com/open?id=1lbIBzQNW2CqbmnbAkY8DM5apzq_YXWFc). Use `pretrained = True`  to load the pre-trained models. 
