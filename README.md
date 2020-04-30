@@ -34,10 +34,8 @@ Here is the summary for the accuracy, params and macs.
 | RegNet-800M | 258          | 6.60          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.01    |
 | RegNet-1.6G | 522          | 8.28          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.45    |
 | RegNet-3.2G | 1038         | 14.3          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.53    |
-| RegNet-4G   | 1298         | 20.8          | batch128_wd0.0001_cos300epoch_lr0.1 | NA       |
-| RegNet-6.4G | 2108         | 24.6          | batch128_wd0.0001_cos300epoch_lr0.1 | NA       |
-
-
+| RegNet-4G   | 1298         | 20.8          | batch128_wd0.0001_cos300epoch_lr0.1 | 95.69    |
+| RegNet-6.4G | 2108         | 24.6          | batch128_wd0.0001_cos300epoch_lr0.1 | 96.20    |
 
 ### ImageNet
 
@@ -52,6 +50,6 @@ For imagenet models, we keep the model and training configuration exactly the sa
 | RegNet-1.6G | 1635         | 9.19          | batch512_wd0.00005_cos100epoch_lr0.4 | 77.0             | 77.09           |
 | RegNet-3.2G | 3233         | 15.3          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.3             | 78.54           |
 | RegNet-4G   | 4014         | 22.1          | batch512_wd0.00005_cos100epoch_lr0.4 | 78.6             | N/A             |
-| RegNet-6.4G | 6527         | 26.2          | batch512_wd0.00005_cos100epoch_lr0.4 | 79.2             | N/A             |
+| RegNet-6.4G | 6527         | 26.2          | batch512_wd0.00005_cos100epoch_lr0.4 | 79.2             | 79.36           |
 
 Note: we only uploaded regnet_200MF, 400MF, 600MF in this repo. Other pretrained models can be found in [here](https://drive.google.com/open?id=1lbIBzQNW2CqbmnbAkY8DM5apzq_YXWFc). Use `pretrained = True`  to load the pre-trained models. 
