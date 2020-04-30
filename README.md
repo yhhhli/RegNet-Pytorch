@@ -8,7 +8,7 @@
 
 Pytorch 1.1.0+
 
-[thop](https://github.com/Lyken17/pytorch-OpCounter) to calculate the flosp and params
+[thop](https://github.com/Lyken17/pytorch-OpCounter) to calculate the flops and params
 
 ### CIFAR10
 
